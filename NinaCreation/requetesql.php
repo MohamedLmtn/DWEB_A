@@ -33,21 +33,27 @@ function existanceclivav($idcli,$idprod){
 
 
 function addfav($idprod,$idcli){
-    $db = connexion();
-    if (isset($idprod) && filter_var($idprod, FILTER_VALIDATE_INT)) {
-        $existenceprod = $db->prepare("select count(*) from PRODUIT where ID_PRODUIT = :idprod");
-        $existenceprod->execute([":idprod" => $idprod]);
-        $prodexiste = $existenceprod->fetch();
-        if ($prodexiste["count(*)"] == 1) {
-            $favprod = $db->prepare("insert into FAVORI values(:idcli,:idprod)");
-            $favprod->execute([":idcli" => $idcli, ":idprod" => $idprod]);
-        }
-        ?>
-        <script>
-alert("le produit n'existe pas")
-</script>
-<?php
-}
+    try{
+        $db = connexion();
+        if (isset($idprod) && filter_var($idprod, FILTER_VALIDATE_INT)) {
+            $existenceprod = $db->prepare("select count(*) from PRODUIT where ID_PRODUIT = :idprod");
+            $existenceprod->execute([":idprod" => $idprod]);
+            $prodexiste = $existenceprod->fetch();
+            if ($prodexiste["count(*)"] == 1) {
+                $favprod = $db->prepare("insert into FAVORI values(:idcli,:idprod)");
+                $favprod->execute([":idcli" => $idcli, ":idprod" => $idprod]);
+            }
+            ?>
+            <script>
+                 alert("le produit n'existe pas")
+            </script>
+            <?php
+            }
+        return "valid";
+    }catch(Exception $e){
+        return "nonvalid";
+    }
+   
 }
 
 function delfav($idprod,$idcli){ 
@@ -71,5 +77,8 @@ alert("le produit n'existe pas")
     }
 }}
 
-
+function testaddfav(){
+    assertEquals("valid",addfav(2,1));
+    assertEquals("nonvalid",addfav(12,11));
+}
 ?>
