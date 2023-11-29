@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+#panierflex {
+    display: flex;
+    border: 1px solid #ccc;
+    margin: 1%;
+    padding: 1%;
+    background-color: #f2f2f282;
+    box-shadow: 8px 8px 20px 0px rgb(0 0 0 / 30%);
+    border-radius: 20Px;
+    width: 27.5%;
+}
+
+.prixPanContainer {
+    margin-left: 11.5%;
+    display: flex;
+    justify-content: start;
+    /* Pour espacer les éléments */
+}
+
+.prixPan {
+    display: flex;
+    border: 1px solid #ccc;
+    margin: 5px;
+    padding: 10px;
+    background-color: #f2f2f282;
+    box-shadow: 8px 8px 20px 0px rgb(0 0 0 / 30%);
+    border-radius: 20Px;
+    width: 160px;
+}
+
+.prixPan a {
+    text-decoration: none;
+    color: inherit;
+    margin-left: 45px;
+}
+
+.formqtes input,
+button {
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 1% 10px;
+    margin: 1% 5px;
+    color: #555;
+    cursor: pointer;
+}
+
+.formqtes button {
+    background-color: #e0e0e0;
+    /* Couleur légèrement différente pour les boutons */
+}
+
+/* Au survol, changer légèrement la couleur de fond */
+.formqtes input:hover,
+.formqtes button:hover {
+    background-color: #d0d0d0;
+}
+
+.fleximg img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 20px;
+}
+
+.textflex {
+    margin-left: 10px;
+}
+
+.textflex p {
+    margin: 5px 0;
+}
+
+/* Ajout de styles pour les alertes */
+/* Style de l'alerte */
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Style du bouton de fermeture (x) */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.fotter {
+    margin-top: 25%;
+}

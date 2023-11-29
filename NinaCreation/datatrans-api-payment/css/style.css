@@ -1,0 +1,44 @@
+.container {
+    text-align: center;
+    margin: 60px;
+    font-family: Arial;
+}
+
+.outer-container {
+    border: 1px solid #ccc;
+    width: 400px;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 40px 0px 40px;
+}
+
+.outer-container img {
+    width: 100px;
+    height: 100px;
+}
+
+.inner-container {
+    text-align: center;
+}
+
+.text-style {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.price-color-align {
+    color: #015601;
+}
+
+.pay-button {
+    padding: 12px;
+    color: white;
+    border-color: #284b76;
+    background-color: #213d61;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.text-center {
+    text-align: center;
+}

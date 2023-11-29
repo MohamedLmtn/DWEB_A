@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+/* Ajoutez une règle de media query pour les écrans mobiles */
+@media (max-width: 767px) {
+
+    /* Réduisez la taille du texte pour les éléments a (liens) du menu */
+    header a {
+        font-size: 20%;
+        /* Ajustez la taille du texte selon vos préférences */
+    }
+
+    /* Réduisez la taille du texte pour les éléments li du sous-menu */
+    nav ul.menu li.boutique>ul.submenu>li a {
+        font-size: 10%;
+        /* Ajustez la taille du texte selon vos préférences */
+    }
+
+    /* Vous pouvez ajouter d'autres styles pour améliorer l'expérience mobile ici */
+}
+
+
+
+body {
+    overflow: auto;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    background-image: url('./img/bg2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    position: relative;
+
+    /*----------------------------------------------------code couleur rose : #f3a9c0 --------------------------------------- */
+}
+
+img {
+    width: auto;
+    aspect-ratio: 5/6;
+    object-fit: cover;
+    /* Styles par dÃ©faut de l'image 
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s; /* Ajout d'une transition pour un effet fluide 
+
+    
+    &:hover {
+        transform: scale(1.1); /* Agrandit l'image de 10% au survol 
+    }*/
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    /* Pour espacer les éléments horizontalement */
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    /* Permet au contenu de passer à la ligne si nécessaire */
+}
+
+.reseaux_sociaux {
+
+    position: absolute;
+    left: 15px;
+    top: 45px;
+
+}
+
+header span a {
+    padding: 0 0 0 10px;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 50%;
+    margin: 0 0 0 22%;
+    padding: 15px;
+
+    /* background couleur dans le header */
+
+}
+
+#borderblack {
+    position: relative;
+}
+
+.lePanier {
+    position: absolute;
+    right: 3%;
+    top: 15%;
+}
+
+.lePanier a img {
+    width: 100px;
+    height: 100px;
+    border-radius: 2cm;
+    mix-blend-mode: color-burn;
+
+}
+
+#borderblack {
+    border: black solid;
+    border-radius: 45px;
+}
+
+a:hover {
+    color: black;
+}
+
+
+
+header a {
+
+    color: black;
+    text-decoration: none;
+    font-size: 117%;
+    font-weight: bold;
+}
+
+
+
+.logo {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.logo img {
+    position: absolute;
+    width: 100%;
+}
+
+/*#comp-l474w98s .style-l49ejatl__root {
+    -st-extends: StylableButton;
+    transition: all 0.2s ease, visibility 0s;
+    padding: 3px;
+    border-radius: 50px;
+    border: 0px solid rgb(63, 118, 82);
+    background: #F9408A;*/
+section-prod div img {
+    height: 590px;
+    border-radius: 1cm;
+    border: 3px white solid;
+    text-align: center;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+}
+
+section-prod div p {
+    text-align: center;
+    color: black;
+}
+
+section-prod p {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-size: 90%;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+#prod {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    justify-content: space-around;
+}
+
+#prod div {
+    width: 30%;
+    margin-top: 2cm;
+
+}
+
+
+/* Style pour la navigation */
+nav ul.menu {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Style pour les Ã©lÃ©ments de la liste de navigation */
+nav ul.menu li {
+    color: white;
+    display: inline-block;
+    left: 20px;
+    font-weight: bold;
+    font-size: 90%;
+
+}
+
+.boutique:hover {
+    color: black;
+}
+
+/* Style pour les liens de la navigation */
+nav ul.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 90%;
+    font-weight: bold;
+    border: none;
+}
+
+
+/* Style pour le menu dÃ©roulant "Boutique" */
+nav ul.menu li.boutique {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: inline-block;
+    left: 20px;
+    font-weight: bold;
+    font-size: 117%;
+
+}
+
+/* Style pour le sous-menu */
+nav ul.menu li.boutique>ul.submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    list-style: none;
+    margin: 0%;
+    padding-right: 100%;
+    padding-block: 1%;
+    border: none;
+    border-radius: 10%;
+}
+
+/* Style pour les Ã©lÃ©ments du sous-menu */
+nav ul.menu li.boutique>ul.submenu>li {
+    padding: 10px;
+    padding-right: 30px;
+    text-align: center;
+    display: block;
+}
+
+/* Style pour les liens du sous-menu */
+nav ul.menu li.boutique>ul.submenu>li a {
+    color: black;
+    text-decoration: none;
+    font-size: 90%;
+}
+
+/* Afficher le sous-menu au survol */
+nav ul.menu li.boutique:hover>ul.submenu {
+    display: block;
+}
+
+.divconnheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgprofile {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.imgprofile:hover {
+    border: 1px black;
+}
+
+.favnonfav {
+    height: 50px;
+    width: 50px;
+    border-radius: 12.25px;
+}
+
+.outer-container img {
+    width: 50%;
+    border-radius: 25%;
+}
+
+.lienfav {
+    position: relative;
+    left: 415px;
+    top: 75px;
+
+}
+
+img#etoile {
+    width: 26px;
+    height: 26px;
+}

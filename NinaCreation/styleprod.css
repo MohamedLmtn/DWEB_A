@@ -1,0 +1,137 @@
+section-produit {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin: 10px;
+}
+
+/* Style pour l'image du produit */
+section-produit img {
+    box-shadow: 8px 8px 20px 0px rgb(0 0 0 / 30%);
+    border-radius: 20px;
+    width: 400px;
+}
+
+/* Style pour les informations du produit */
+#infosProd {
+    max-width: 400px;
+}
+
+#infosProd p {
+    margin: 10px 0;
+}
+
+
+
+#box-avis {
+    display: flex;
+    border: 0.5px whitesmoke;
+    box-shadow: 8px 8px 20px 0px rgb(0 0 0 / 20%);
+    border-radius: 25%;
+    width: 25%;
+    text-align: center;
+    flex-direction: column;
+    margin-left: 35%;
+
+}
+
+.btnVal {
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 2px 6px 5px grey;
+    border: 0px;
+
+}
+
+.btnVal:hover {
+    background-color: #d5d1d1;
+}
+
+#infosProd button {
+    padding: 10px 20px;
+    background-color: rgb(0 0 0 / 30%);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 20Px;
+}
+
+#infosProd button:hover {
+    background-color: #1e1e1f;
+}
+
+/* Style pour les avis */
+#section-avis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#section-avis div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+#section-avis h2 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+#section-avis p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+#section-avis #etoile {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Style pour le formulaire de commentaire */
+#form-avis {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#form-avis div {
+    margin-bottom: 10px;
+}
+
+#form-avis label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#form-avis input[type="text"],
+#form-avis textarea {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.stars {
+    margin-bottom: 10px;
+}
+
+.stars i {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.stars i.las {
+    color: red;
+}

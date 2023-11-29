@@ -1,0 +1,90 @@
+footer {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    margin-top: 10%;
+    border-radius: 15px;
+    width: auto;
+    position: static;
+    bottom: 0;
+    right: 0px;
+    left: 0px;
+}
+
+/* RÃ©initialisation des marges et des rembourrages pour le formulaire */
+form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Centrer le contenu du formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Styling pour le div footer_mail */
+#footer_mail {
+    margin-top: 20px;
+    width: 40%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* Espacement entre les sections */
+}
+
+#footer_mail button {
+    margin-left: 10px;
+}
+
+/* Centrer le div auto-email */
+#auto-email {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 10px;
+    /* Espacement entre les sections */
+}
+
+#auto-email a {
+    margin-top: 18px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Styling pour l'input */
+#email {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Styling pour le bouton */
+footer button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: white solid;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Styling pour le lien dans le div auto-email */
+#auto-email a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/*#comp-l474w98s .style-l49ejatl__root {
+    -st-extends: StylableButton;
+    transition: all 0.2s ease, visibility 0s;
+    padding: 3px;
+    border-radius: 50px;
+    border: 0px solid rgb(63, 118, 82);
+    background: #F9408A;*/

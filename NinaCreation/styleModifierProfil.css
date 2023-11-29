@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    width: 20%;
+
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.profile label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.profile input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.profile button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.profile button:hover {
+    background-color: #45a049;
+}
+
+/* Ajoutez plus de styles selon vos besoins */
