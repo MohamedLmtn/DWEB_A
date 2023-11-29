@@ -77,8 +77,10 @@ alert("le produit n'existe pas")
     }
 }}
 
-function testaddfav(){
+function testaddfavtrue(){
     assertEquals("valid",addfav(2,1));
+}
+function testaddfavfalse(){
     assertEquals("nonvalid",addfav(12,11));
 }
 ?>

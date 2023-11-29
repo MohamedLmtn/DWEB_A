@@ -1,4 +1,6 @@
+
 <?php
+
  require_once("requetesql.php");
 if (isset($_GET["idprod"]) && !empty($_GET["idprod"])) {
     session_start();
