@@ -38,10 +38,11 @@ function existanceclivav( $idcli, $idprod )
     return $fav;
 }
 
-function addfav( $idprod, $idcli )
+function addfav( $idprod, $idcli, $rollback = false )
  {
     try {
         $db = connexion();
+        $db->beginTransaction();
         if ( isset( $idprod ) && filter_var( $idprod, FILTER_VALIDATE_INT ) ) {
             $existenceprod = $db->prepare( 'select count(*) from PRODUIT where ID_PRODUIT = :idprod' );
             $existenceprod->execute( [ ':idprod' => $idprod ] );
@@ -49,6 +50,9 @@ function addfav( $idprod, $idcli )
             if ( $prodexiste[ 'count(*)' ] == 1 ) {
                 $favprod = $db->prepare( 'insert into FAVORI values(:idcli,:idprod)' );
                 $favprod->execute( [ ':idcli' => $idcli, ':idprod' => $idprod ] );
+                if ( $rollback ) {
+                    $db->rollBack();
+                }
                 return 'valide';
             }
             ?>
