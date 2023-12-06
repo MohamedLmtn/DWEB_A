@@ -53,6 +53,7 @@ function addfav( $idprod, $idcli, $rollback )
                 if ( $rollback ) {
                     $db->rollBack();
                 }
+                $db->commit();
 
                 return 'valide';
 
