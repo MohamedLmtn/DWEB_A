@@ -12,7 +12,7 @@
 
 
 <body>
-    <button id="back" onclick="goBack()">Revenir</button>
+    <button id="back" onclick="goBack()">Revenir en arrière</button>
 
     <script>
         // Fonction pour revenir en arrière dans l'historique du navigateur
