@@ -3,13 +3,13 @@ require_once( 'requetesql.php' );
 
 function testaddfavtrue()
  {
-    echo addfav( 1, 1, true ) . '<br>' ;
+    echo "Test avec l'id client 1 et le produit numero 1 est : ".addfav( 1, 1, true ) . '<br>' ;
 
 }
 
 function testaddfavfalse()
  {
-    echo addfav( 1, 11 ) ;
+    echo "Test avec l'id client 11 et le produit numero 1 est : ".addfav( 1, 11 ) ;
 
 }
 
