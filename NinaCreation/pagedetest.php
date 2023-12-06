@@ -9,7 +9,7 @@ function testaddfavtrue()
 
 function testaddfavfalse()
  {
-    echo "Test avec l'id client 11 et le produit numero 1 est : ".addfav( 1, 11 ) ;
+    echo "Test avec l'id client 11 et le produit numero 1 est : ".addfav( 1, 11, false ) ;
 
 }
 

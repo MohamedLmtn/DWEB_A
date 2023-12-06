@@ -8,7 +8,7 @@ if (isset($_GET["idprod"]) && !empty($_GET["idprod"])) {
         delfav($_GET["idprod"],$_SESSION["idcli"]);
         header('Location: ' . $_SERVER['HTTP_REFERER']);
     }else{
-        addfav($_GET["idprod"],$_SESSION["idcli"]);
+        addfav($_GET["idprod"],$_SESSION["idcli"],true);
         header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
 }

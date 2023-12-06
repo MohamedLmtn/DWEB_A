@@ -38,7 +38,7 @@ function existanceclivav( $idcli, $idprod )
     return $fav;
 }
 
-function addfav( $idprod, $idcli, $rollback = false )
+function addfav( $idprod, $idcli, $rollback )
  {
     try {
         $db = connexion();
@@ -53,13 +53,17 @@ function addfav( $idprod, $idcli, $rollback = false )
                 if ( $rollback ) {
                     $db->rollBack();
                 }
+
                 return 'valide';
+
+            } else {
+                ?>
+                <script>
+                alert( "le produit n'existe pas" )
+                </script>
+                <?php
             }
-            ?>
-            <script>
-            alert( "le produit n'existe pas" )
-            </script>
-            <?php
+
         }
 
     } catch ( Exception $e ) {
