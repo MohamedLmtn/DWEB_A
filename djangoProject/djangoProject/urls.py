@@ -1,5 +1,5 @@
 """
-URL configuration for Project project.
+URL configuration for djangoProject project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,7 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from MangaLister import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+   # path('admin/', admin.site.urls),
+    path('',views.htmlbodybase),
+    path('manga/',views.htmladdMangaDetails),
+    path('traitementdata/',views.adminpage),
+    path('databaseTRT/', views.traitementadmin),
+    path('databaseTRTcat/', views.traitementadmincat),
+    path('databaseTRT/<int:parametre>/', views.traitementadmin,name='delmanga'),
+    path('databaseTRTcat/<int:parametre>/', views.traitementadmincat,name='delcat'),
+
+    path('home/',views.htmlbodybase),
+
 ]

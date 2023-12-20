@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Acceuils</title>
+</head>
+<body>
+            <h1>Add Manga</h1>
+
+            <form action="/databaseTRT/" method="post">
+            {% csrf_token %}
+            <label for="catmanga">categorie({{ catString }}) </label>
+            <input type="number" min="1" id="catmanga" name="catmanga"><br><br>
+            <label for="nommanga">Nom: </label>
+            <input type="text" id="nommanga" name="nommanga"><br><br>
+            <label for="nomautheur">Autheur :</label>
+            <input type="text" id="nomautheur" name="nomautheur"><br><br>
+            <input type="submit" value="Add" name="typetraitement">
+
+            </form>
+
+            <br><br>
+
+            <h1>Update info Manga</h1>
+
+            <form action="/databaseTRT/" method="post">
+            {% csrf_token %}
+            <label for="idmanga">IDManga: </label>
+            <input type="text" id="idmanga" name="idmanga"><br><br>
+            <label for="catmanga">NVcategorie ({{ catString }})</label>
+            <input type="number" min="1" id="catmanga" name="catmanga"><br><br>
+            <label for="nommanga">NVNom: </label>
+            <input type="text" id="nommanga" name="nommanga"><br><br>
+            <label for="nomautheur">NVAutheur :</label>
+            <input type="text" id="nomautheur" name="nomautheur"><br><br>
+            <input type="submit" value="Update" name="typetraitement">
+
+            </form>
+
+            <br><br>
+
+            <h1>Del Manga</h1>
+            {% for manga in listallmanga %}
+            <div>{{ manga.title }}<a href="{% url 'delmanga' manga.id %}"><button>supprimer</button></a><br></div>
+            {% endfor %}
+
+            <p>-----------------------------------------------------------------</p>
+
+            <h1>Add catégorie</h1>
+
+            <form action="/databaseTRTcat/" method="post">
+                {% csrf_token %}
+            <label for="nomcat">Nom: </label>
+            <input type="text" id="nomcat" name="nomcat"><br><br>
+            <input type="submit" value="Add" name="typetraitementcat">
+            </form>
+
+            <br><br>
+
+            <h1>Update catégorie</h1>
+
+            <form action="/databaseTRTcat/" method="post">
+            {% csrf_token %}
+            <label for="catmanga">categorie existante ({{ catString }})</label><br>
+                <label for="idcat">IDCat: </label>
+            <input type="number" id="idcat" name="idcat"><br><br>
+            <label for="namecat">UPCategorie: </label>
+            <input type="text" id="namecat" name="namecat"><br><br>
+
+            <input type="submit" value="Update" name="typetraitementcat">
+
+            </form>
+
+            <br><br>
+
+            <h1>Del catégorie</h1>
+
+            {% for cat in listcategorie %}
+            <div>{{ cat.name }}<a href="{% url 'delcat' cat.id %}"><button>supprimer</button></a><br></div>
+            {% endfor %}
+
+</body>
+</html>
