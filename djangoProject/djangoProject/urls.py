@@ -16,18 +16,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from MangaLister import views
+from MangaLister import viewscategorie
+from MangaLister import viewsmanga
+from MangaLister import viewsindexfilter
+from MangaLister import viewsadmin
 
 urlpatterns = [
    # path('admin/', admin.site.urls),
-    path('',views.htmlbodybase),
-    path('manga/',views.htmladdMangaDetails),
-    path('traitementdata/',views.adminpage),
-    path('databaseTRT/', views.traitementadmin),
-    path('databaseTRTcat/', views.traitementadmincat),
-    path('databaseTRT/<int:parametre>/', views.traitementadmin,name='delmanga'),
-    path('databaseTRTcat/<int:parametre>/', views.traitementadmincat,name='delcat'),
+    path('',viewsindexfilter.htmlbodybase),
+    path('manga/',viewsindexfilter.htmladdMangaDetails),
+    path('traitementmanga/',viewsadmin.adminpagemanga),
+    path('traitementcategorie/',viewsadmin.adminpagecat),
+    path('databaseTRT/', viewsmanga.traitementadmin),
+    path('databaseTRTcat/', viewscategorie.traitementadmincat),
+    path('databaseTRT/<int:parametre>/', viewsmanga.traitementadmin,name='delmanga'),
+    path('databaseTRTcat/<int:parametre>/', viewscategorie.traitementadmincat,name='delcat'),
 
-    path('home/',views.htmlbodybase),
+    path('home/',viewsindexfilter.htmlbodybase),
 
 ]
